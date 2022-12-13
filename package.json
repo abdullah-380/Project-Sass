@@ -1,0 +1,22 @@
+{
+  "name": "project-sass",
+  "version": "1.0.0",
+  "description": "jason file for sass project",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/style.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullah-380/Project-Sass.git"
+  },
+  "author": "usman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdullah-380/Project-Sass/issues"
+  },
+  "homepage": "https://github.com/abdullah-380/Project-Sass#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

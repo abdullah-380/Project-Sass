@@ -1,0 +1,118 @@
+
+@import "./base/base";
+@import "./base/animation";
+@import "./base/typhography";
+
+
+$color-primary: #11c43b;
+$color-primary-dark: #3ca04f;
+$color-white: #ffffff;
+$color-black: #000000;
+
+
+
+.header {
+  height: 90vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.9),
+      rgba($color-primary-dark, 0.9)
+    ),
+    url(../assests/maxresdefault-1-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  position: relative;
+
+  .logo-box {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+
+    .logo {
+      height: 180px;
+    }
+  }
+
+    .headings {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+
+    .main-heading {
+      letter-spacing: 30px;
+      font-size: 40px;
+      animation: To-Right 0.7s ease-in-out;
+    }
+
+    & .sub-heading {
+      word-spacing: 32px;
+      letter-spacing: 10px;
+      animation: To-Left 0.7s ease-in-out;
+      margin-bottom: 70px;
+    }
+  }
+
+  .btn {
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 40px;
+      display: inline-block;
+      word-spacing: 2px;
+      transition: 0.1s ease-in-out;
+      animation: To-Up 0.7s ease-in-out 0.4s;
+      position: relative;
+      animation-fill-mode: backwards;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: rgba($color-black, 0.3) 0px 10px 20px,
+        rgba($color-black, 0.22) 0px 10px 20px;
+
+        &::after {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+    }
+
+    &:active {
+    transform: translateY(-1px);
+    box-shadow: rgba($color-black, 0.3) 0px 5px 10px,
+        rgba($color-black, 0.22) 0px 5px 10px;
+    }
+
+    &-color {
+      background-color: white;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      border-radius: 50px;
+
+      &::after {
+        background-color: white;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      display: inline-block;
+      transition: all 0.4s;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: 50px;
+    }
+
+  }
+}
+
