@@ -1,7 +1,28 @@
+//Abstracts Folder SCSS
+@import "./abstracts/function";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
 
+
+//Base Folder SCSS
 @import "./base/base";
 @import "./base/animation";
 @import "./base/typhography";
+
+
+//Components Folder SCSS
+@import "./components/buttons";
+
+
+//Layout Folder SCSS
+@import "./layout/header";
+
+
+//Pages Folder SCSS
+@import "./pages/";
+
+
+
 
 
 $color-primary: #11c43b;
